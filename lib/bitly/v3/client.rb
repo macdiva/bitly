@@ -83,7 +83,14 @@ module Bitly
         end
         return results.length > 1 ? results : results[0]
       end
-        
+      
+      # Provides a list of countries from which clicks on a specified bit.ly short link have originated, and the number of clicks per country.
+      #
+      # Returns the results in the order they were entered
+      def countries(input)
+          get_method(:countries, input)
+      end
+
       private
     
       def get(method, opts={})
